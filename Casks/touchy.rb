@@ -8,13 +8,11 @@ cask "touchy" do
   desc "Touch Screen & Logo Toggle"
   homepage "https://touchymac.com/"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Touchy.app"
 
   uninstall launchctl: "com.taylorbrauer.Touchy.helper"
 
-  zap trash: [
-    "~/Library/Preferences/com.taylorbrauer.Touchy.plist",
-  ]
+  zap trash: "~/Library/Preferences/com.taylorbrauer.Touchy.plist"
 end
