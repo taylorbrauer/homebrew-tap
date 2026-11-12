@@ -7,7 +7,7 @@ cask "touchy" do
   desc "Touch Screen & Logo Toggle"
   homepage "https://touchymac.com/"
 
-  depends_on macos: :sonoma
+  depends_on macos: :golden_gate
 
   app "Touchy.app"
 
