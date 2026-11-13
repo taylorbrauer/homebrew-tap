@@ -1,6 +1,6 @@
 cask "touchy" do
-  version "1.1.0"
-  sha256 "044f8a200495b23635f76af86fd0e2f5a7d189b9b14ef5e27e56331dc0cac2c0"
+  version "1.2.0"
+  sha256 "eaebffb7985628912f9c40f4c74b87cbb0aab197b62d2f79a36d3ce190ecf126"
 
   url "https://github.com/taylorbrauer/touchy-releases/releases/download/v#{version}/Touchy-#{version}.zip"
   name "Touchy"
