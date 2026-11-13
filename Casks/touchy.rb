@@ -7,11 +7,18 @@ cask "touchy" do
   desc "Touch Screen & Logo Toggle"
   homepage "https://touchymac.com/"
 
+  # Touchy updates itself (Sparkle), so `brew upgrade` leaves it alone
+  # unless run with --greedy.
+  auto_updates true
   depends_on macos: :golden_gate
 
   app "Touchy.app"
 
   uninstall launchctl: "com.taylorbrauer.Touchy.helper"
 
-  zap trash: "~/Library/Preferences/com.taylorbrauer.Touchy.plist"
+  zap trash: [
+    "~/Library/Caches/com.taylorbrauer.Touchy",
+    "~/Library/HTTPStorages/com.taylorbrauer.Touchy",
+    "~/Library/Preferences/com.taylorbrauer.Touchy.plist",
+  ]
 end
